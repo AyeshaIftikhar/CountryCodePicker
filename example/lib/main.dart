@@ -99,6 +99,22 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.black),
+                ),
+                child: CountryCodePicker(
+                  onChanged: print,
+                  initialSelection: 'IT',
+                  favorite: ['+39', 'FR'],
+                  countryFilter: ['IT', 'FR'],
+                  hideMainText: true,
+                  showDropDownButton: true,
+                  showFlag: false,
+                  showFlagMain: true,
+                ),
+              ),
               CountryCodePicker(
                 onChanged: print,
                 // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
