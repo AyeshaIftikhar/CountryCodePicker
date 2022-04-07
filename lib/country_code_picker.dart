@@ -211,16 +211,15 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                 Flexible(
                   flex: widget.alignLeft ? 0 : 1,
                   fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
-                  child: widget.hideMainText
-                      ? Icon(
-                          Icons.arrow_drop_down,
-                          color: Colors.grey,
-                          size: widget.flagWidth,
-                        )
-                      : Padding(
+                  child: Padding(
                           padding: widget.alignLeft
-                              ? const EdgeInsets.only(right: 16.0, left: 8.0)
-                              : const EdgeInsets.only(right: 16.0),
+                              ? EdgeInsets.only(
+                                  right: widget.hideMainText ? 0 : 16.0,
+                                  left: widget.hideMainText ? 0 : 8.0,
+                                )
+                              : EdgeInsets.only(
+                                  right: widget.hideMainText ? 0 : 16.0,
+                                ),
                           child: Icon(
                             Icons.arrow_drop_down,
                             color: Colors.grey,

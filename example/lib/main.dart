@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
+                padding: EdgeInsets.zero,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Colors.black),
@@ -113,6 +114,7 @@ class _MyAppState extends State<MyApp> {
                   showDropDownButton: true,
                   showFlag: false,
                   showFlagMain: true,
+                  padding: EdgeInsets.zero,
                 ),
               ),
               CountryCodePicker(
